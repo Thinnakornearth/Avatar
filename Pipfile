@@ -4,11 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-flask = "*"
-flask-sqlalchemy = "*"
-flask-migrate = "*"
-mysql-connector-python = "*"
-flask-mysql = "*"
 
 [dev-packages]
 
