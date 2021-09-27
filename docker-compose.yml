@@ -1,0 +1,32 @@
+version: "3"
+services:
+  travel-exemption:
+    build:
+      context: travel-exemption
+    ports:
+      - "50001:5000"
+    environment:
+      DATABASE_URL: "mysql+mysqlconnector://root:12345@db/mysql"
+    depends_on:
+      - db
+    networks: [backend]
+
+
+  db:
+    image: mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: "12345"
+    ports:
+      - "26257:3306"
+
+    networks: [backend]
+  
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks: [backend]
+    
+networks:
+  backend:
