@@ -1,0 +1,32 @@
+version: "3.9"
+services:
+  travel-exemption:
+    container_name: "travel-exemption"
+    build:
+      context: .
+    ports:
+      - "50001:5000"
+    environment:
+      DATABASE_URL: "mysql+mysqlconnector://root:12345@t-db:3306/travel_exemption"
+    depends_on:
+      t-db:
+        condition: service_healthy
+    networks: [backend]
+  
+  t-db:
+    image: mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: "12345"
+      MYSQL_DATABASE: "travel_exemption"
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 5s
+      retries: 10
+    ports:
+      - "3307:3306"
+    networks: [backend]
+
+
+networks:
+  backend:
+    external: true

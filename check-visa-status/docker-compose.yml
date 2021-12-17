@@ -1,0 +1,36 @@
+version: "3.9"
+services:
+  check-visa-status:
+    container_name: "visa-status"
+    build:
+      context: .
+    ports:
+      - "50002:5000"
+    environment:
+      DATABASE_URL: "mysql+mysqlconnector://root:12345@visa-db:3306/visa"
+    depends_on:
+      visa-db:
+        condition: service_healthy
+    networks: [backend]
+
+  visa-db:
+    # container_name: "database"
+    image: mysql
+    # command: --init-file /data/application/init.sql
+    # volumes:
+    #     - ./init.sql:/data/application/init.sql
+    environment: 
+      MYSQL_ROOT_PASSWORD: "12345"
+      MYSQL_DATABASE: "visa"
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 5s
+      retries: 10
+    ports:
+      - "3306:3306"
+    networks: [backend]
+
+
+networks:
+  backend:
+    external: true

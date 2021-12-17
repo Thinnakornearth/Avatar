@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+
+:root {
+    --blue: #0188DF;
+    --black: #354046;
+}
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    border: none !important;
+    outline: none !important;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    font-weight: 400;
+    transition: all .2s linear;
+    
+}
+
+*::selection {
+    background:var(--black);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body {
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0; left:0;
+    padding: 2rem 1rem;
+    z-index: 1000;
+    background-color: rgb(255, 187, 255);
+}
+
+
+header a{
+    color: var(--black);
+}
+
+header a:hover{
+    color: var(--blue);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container .logo {
+    font-size: 3rem;
+}
+
+header .container .logo span{
+    color: var(--blue);
+}
+
+header .nav ul{
+    margin: 0; padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .nav ul li {
+    margin: 0 1rem;
+}
+
+header .nav ul li a{
+    font-size: 2rem;
+}
+
+section {
+    overflow: hidden;
+}
+.home .content h1{
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.home .content h1 span{
+    color: var(--blue)
+}
+.about {
+    margin-top: 10%;
+}
+.about div {
+    margin-left: 6%;
+}
+.about div h1 {
+    color: var(--black);
+    font-size: 4rem;
+}
+.about div p {
+    color: var(--black);
+    font-size: 2rem;
+}
+.service {
+    margin-top: 10%;
+}
+.service div {
+    margin-left: 6%;
+}
+.service h1 {
+    color: var(--black);
+    font-size: 4rem;
+}
+
+.heading {
+    text-align: center;
+    padding: 1rem;
+}
+.success {
+    text-align: left;
+    font-size:2rem;
+}
+.service #travel {
+    color: var(--black);
+    font-size: 1.5rem;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: var(--blue);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+.box img {
+    margin-top: 2rem;
+}
+
+input {
+    border: solid;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type="text"]:disabled {
+    background: #dddddd;
+  }
+
+  
+#submit {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+ #submit:hover {
+    background-color: #45a049;
+  }
+  
+.postApi {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 1100px
+  }

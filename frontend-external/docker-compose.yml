@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  frontend-external:
+    container_name: "frontend-external"
+    build:
+      context: .
+    ports:
+      - "8888:80"

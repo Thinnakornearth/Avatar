@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: DockerFile
+    ports:
+      - 7001:5000
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: birth
+      MYSQL_USER: birth
+      MYSQL_PASSWORD: birth
+      MYSQL_ROOT_PASSWORD: birth
+    volumes:
+      - .dbdata:/var/lib/mysql
+    ports:
+      - 3310:3310

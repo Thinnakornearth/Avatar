@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Government services for Avatar citizens">
+    <title>Avatar Service</title>
+
+    <!-- some bootstrap below-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="driverLicence.js"></script> 
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="index.html" class="logo"><span>A</span>VATAR <span>G</span>overnment</a>
+        <nav class="nav">
+            <ul>
+                <li><a href="service.html">Service</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</header>
+<section class="service" id="service">
+    <input size="4" type="text" placeholder= "application ID-check"name="t-id"  required id="t-id">
+    <button onClick="check()" class="button" style="vertical-align:middle"><span>check status</span></button>
+    <br/><br/>
+    <input size="4" type="text" placeholder= "application ID-approve"name="t-id"  required id="ta-id">
+    <button onClick="approve()" class="button" style="vertical-align:middle"><span>approve</span></button>
+    <br/><br/>
+    <input size="4" type="text" placeholder= "application ID-reject"name="t-id"  required id="tr-id">
+    <button onClick="reject()" class="button" style="vertical-align:middle"><span>reject</span></button>
+    <br><br><br>
+    <h2>record</h2>
+    <table  style="font-size: 25px; border: 1;">
+        <tr>
+            <td>ID:</td>
+            <td id="d-id">---</td>
+        </tr>
+        <tr>
+            <td >Name:</td>
+            <td id="d-name">---</td>
+        </tr>
+        <tr>
+            <td>DOB:</td>
+            <td id="d-dob">---</td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td id="d-address">---</td>
+        </tr>
+        <tr>
+            <td>Phone:</td>
+            <td id="d-phone">---</td>
+        </tr>
+        <tr>
+            <td>submit_date:</td>
+            <td id="d-sub">---</td>
+        </tr>
+        <tr>
+            <td>Status:</td>
+            <td id="d-status">---</td>
+        </tr>
+    </table>
+</section>
+</body>
+</html>

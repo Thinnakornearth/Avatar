@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: DockerFile
+    ports:
+      - 7000:5000
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    networks: [backend]
+  db:
+    image: mysql
+    restart: always
+    environment: 
+      MYSQL_DATABASE: driver
+      MYSQL_USER: drive
+      MYSQL_PASSWORD: drive
+      MYSQL_ROOT_PASSWORD: drive
+    volumes:
+      - .dbdata:/var/lib/mysql
+    ports:
+      - 3308:3306
+    networks: [backend]
+
+
+networks:
+  backend:
+    external: true
+
+
+

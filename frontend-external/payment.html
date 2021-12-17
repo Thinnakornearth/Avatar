@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Government services for Avatar citizens">
+    <title>Avatar Service</title>
+
+    <!-- some bootstrap below-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="payment.js"></script>
+</head>
+<body onLoad="makeAjaxQuery()">
+<header>
+    <div class="container">
+        <a href="index.html" class="logo"><span>A</span>VATAR <span>G</span>overnment</a>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="news.html">News</a></li> 
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="service" id="service">
+    <h1 class="heading">Please Complete Your Payment Here</h1>
+        <br/><br/>
+        <div class="postApi">
+        <label for="service_name">Service Name *</label>
+        <input type="text" name="service_name" required id="service_name1" disabled>
+        
+        <label for="application_id">Application ID *</label>
+        <input type="text" name="application_id" required id="application_id1" disabled>
+
+        <label for="applicant">Full Name *</label>
+        <input type="text" name="applicant" required id="applicant1" disabled>
+
+        <label for="amount">Amount *</label>
+        <input type="text" name="amount" required id="amount" disabled>
+
+        <label for="card_number">Card Number *</label>
+        <input type="text" name="card_number" value="4567987465411234" required id="card_number1">
+
+        <button id="submit" onclick="sendData()">Submit</button>
+        
+        
+    </div>
+</section>
+
+</body>
+</html>

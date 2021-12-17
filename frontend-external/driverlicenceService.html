@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Government services for Avatar citizens">
+    <title>Avatar Service</title>
+
+    <!-- some bootstrap below-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="driverLicence.js"></script> 
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="index.html" class="logo"><span>A</span>VATAR <span>G</span>overnment</a>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="news.html">News</a></li> 
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</header>
+<section class="service" id="service">
+    <h1 class="heading">Driver Licence Application Form</h1>
+    <br/><br/>
+        <div class="postApi">
+        <label for="fullName">Full Name *</label>
+        <input type="text" name="name" value="Crazy Guy" required id="name1">
+    
+        <label for="dob">Date of Birth *</label>
+        <input type="text" name="dob" value="1993-09-12" required id="dob1">
+    
+        <label for="address">Address *</label>
+        <input type="text" name="address" value="roomA1, 2 fake street" required id="address1">
+
+        <label for="phone">Contact Number *</label>
+        <input type="text" name="phone" value="0234567887" required id="phone1">
+
+        <label for="email">Email *</label>
+        <input type="text" name="email" value="crazyguy@gmail.com" required id="email1">
+
+        <label for="passport_number">Passport Number *</label>
+        <input type="text" name="passport_number" value="H987654" required id="passport1">
+
+        Please Provide one of the following "Medicare Card Number" or "Photo Id Card Number" <br/><br/>
+
+        <label for="medicare_card">Medicare Card Number</label>
+        <input type="text" name="medicare_card" value="0321654789" id="medicare1">
+
+        <label for="photo_id">Photo ID Card Number</label>
+        <input type="text" name="photo_id" value="A987654321" id="photoid1">
+        
+      
+        <button onClick="makeAjaxQuery()" id="submit">Submit</button>
+    </div>
+       
+
+   
+
+</section>
+</body>
+</html>
