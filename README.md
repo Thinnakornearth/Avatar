@@ -22,3 +22,7 @@ The API gateway allows us to map all of the incoming calls and direct them to ap
 * Docker
 * HTML
 * CSS
+
+# Component
+
+There are quite a few compenents in this project. The frontend (UI) is divided into 2 sides which are for officers and clients. However, both of them share the same databases and API. 
