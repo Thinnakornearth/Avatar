@@ -7,6 +7,8 @@ There are now three services in this platform which are:
 * Driver Licence Service.
 * Birth Certificate Service.
 
+However, there are a few services in which these services will complement all government's services such as, payment service and check visa status service.
+
 # Project Approach
 
 The project uses microservices approach to develop the services. This means all services are independent so this method eliminates all problems in monolithic architecture. 
